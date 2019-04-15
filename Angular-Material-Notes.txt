@@ -1,0 +1,48 @@
+				Angular Material
+
+https://github.com/ajtowf/angularmaterial/
+
+*we can test the component before creating by using  --dry-run
+
+---->To install Anglular material run the following command.
+
+1.npm install --save @angular/material @angular/cdk
+
+2.npm install --save @angular/animations
+
+3. Import BrowserAnimationsModule in app.module.ts :
+
+	import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+4. create a seperate module to import all the material components. 
+
+	ng g m shared/material --flat.
+
+5. Add a theme in styles.scss globally,
+
+	@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+6. To achieve full feature of material import Gesure support,
+
+npm install --save hammerjs
+
+	-->open main.js and import,
+
+		import 'hammerjs';
+
+7. Add material icon link to index.html,
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+----------------------------------------------------------------------------
+			FLUX BOX
+
+0. import FormsModule,
+
+	import { FormsModule } from '@angular/forms';
+
+1. npm install --save @angular/flex-layout
+
+2. Import FlexLayoutModule right after the material module,
+
+	import { FlexLayoutModule } from '@angular/flex-layout';
