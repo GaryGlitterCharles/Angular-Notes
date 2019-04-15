@@ -1,0 +1,37 @@
+#Communicating between components
+
+<hr> ---> divider line tag,
+
+Anchor tag will not have href, need to give  css for a click  a{cursor:pointer} 
+
+#Resuing components with content projection
+
+* content projection
+
+Makes all the content available inside the tag
+<ng-content></ng-content>
+
+#Displaying data with pipes
+
+[class.active]--> makes the tag active when condition is true.
+
+*ngOnchanges() -->This method is called every time when the @Input() receives the new value.
+
+#Template variable- this is also used communicate with parent to child component,and it is one of the best way
+
+# Passing values in the rout (in URL),
+-->use activated rout as a import and inject into the constructor,
+-->To fetch the value from the url use this,
+----->this.rout.snapshot.params['id']
+
+#
+!! -->perfix this  to typecast as boolean
+
+#Routing guard
+
+*CanActive --> This will not allow the user to go inside the link
+
+*CanDeactivate --> This will not allow the user to go back unless some function is done(same page will be displayed until some function is performed)
+
+*Resolve --> The component's template will be loaded unless angular loads the data from an API call.
+-->The resolve will return an observable 
