@@ -1,0 +1,7 @@
+
+//To change the port of json server
+json-server -p 4000 bd.json
+
+
+//To run the json server
+json-server --watch db.json
