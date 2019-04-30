@@ -34,4 +34,73 @@ Makes all the content available inside the tag
 *CanDeactivate --> This will not allow the user to go back unless some function is done(same page will be displayed until some function is performed)
 
 *Resolve --> The component's template will be loaded unless angular loads the data from an API call.
--->The resolve will return an observable 
+-->The resolve will return an observable.
+
+# Template based from and validation
+
+* import { FormsModule } from '@angular/forms';	
+
+[()] --> Two way binding ie. from component to html and vice-versa
+()--> From html to component.
+[]--> from component to html.
+
+* use " ngModel " to send data to component from template.
+* To access the values in the component from template use a template variable in
+form tag eg. <form #loginForm="ngForm" (ngSubmit)='login(loginForm.value)'>
+* use  ngModelGroup= " " to combine related inputs.
+
+----> To validate use the template variable to get access the validators,
+
+( ---templatevariable----).valid  --> returns Boolean 
+( ---templatevariable----).invalid  --> returns Boolean 
+( ---templatevariable----).dirty  --> returns Boolean 
+( ---templatevariable----).pristine  --> returns Boolean 
+( ---templatevariable----).submitted  --> returns Boolean 
+( ---templatevariable----).touched  --> returns Boolean 
+( ---templatevariable----).untouched  --> returns Boolean 
+
+-----------------------------**
+
+For more specific validation
+
+( ---templatevariable----).controls.(--name of the ngModel--).valid  --> returns Boolean 
+
+-->Disdable the button,
+
+--> To disable the submit button unless correct value is given, use
+* [disabled]='(--form name--).invalid'
+
+
+
+** mouse hover event
+---->(mouseenter)='mouseover=true' 
+---->(mouseleave)='mouseover=false'
+
+# Reactive Forms
+
+* import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+---> In the template use [formGroup]="--some name--" inside the form tag.
+---> Use the formControlName='--name--'  ------> This name should match the properties of the form group.
+
+## ng-content
+	
+similar to interpolation bracket --> {{ }} it will show the content from component to template.
+
+<ng-content></ng-content>  ----> the whole content in the parent component template wil be wrapped inside the ng-content.
+
+---> refer "https://app.pluralsight.com/player?course=angular-fundamentals&author=jim-cooper&name=angular-fundamentals-m8&clip=2&mode=live" for more on Using Multiple Slot Content Projection.
+
+#Custom Pipe
+
+1. To create a custom pipe create a seperate ts file.
+2.@Pipe({name: ' --name of your pipe-- '})
+3. import { Pipe, PipeTransform } from '@angular/core';
+4. implement PipeTransform and add the transform(){} method.
+
+#Dependancy Injuction
+
+--->#InjectionToKen, this is used whenever we want to make an array (or) object (or) interface as an injector. which means no class is needed to use access the array (or) object (or) interface.
+
+--> 1. import {InjectionToken} from '@angular/core'; 
+2. let --name in CAPS-- = new InjectionToken<>('-- simple string--')
