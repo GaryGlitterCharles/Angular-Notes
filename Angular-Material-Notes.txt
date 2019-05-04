@@ -10,7 +10,7 @@ https://github.com/ajtowf/angularmaterial/
 
 2.npm install --save @angular/animations
 
-3. Import BrowserAnimationsModule in app.module.ts :
+3. Import BrowserAnimationsModule in app.module.ts : *NOTE: import below BrowserModule in imports array.
 
 	import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
