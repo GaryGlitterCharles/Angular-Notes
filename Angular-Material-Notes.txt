@@ -47,4 +47,6 @@ npm install --save hammerjs
 2. Import FlexLayoutModule right after the material module,
 
 	import { FlexLayoutModule } from '@angular/flex-layout';
-3.	
+3. layout demo ,
+
+	https://tburleson-layouts-demos.firebaseapp.com/#/docs
