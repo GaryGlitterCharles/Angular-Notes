@@ -34,12 +34,13 @@ npm install --save hammerjs
 	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-----------------------------------------------------------------------------
-			FLUX BOX
-
-0. import FormsModule,
+8. import FormsModule,
 
 	import { FormsModule } from '@angular/forms';
+	
+----------------------------------------------------------------------------------------------------------------------------------------	
+	
+							FLUX BOX
 
 1. npm install --save @angular/flex-layout
 
