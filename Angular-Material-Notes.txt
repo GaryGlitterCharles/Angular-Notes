@@ -50,3 +50,11 @@ npm install --save hammerjs
 3. layout demo ,
 
 	https://tburleson-layouts-demos.firebaseapp.com/#/docs
+	
+----------------------------------------------------------------------------------------------------------------------------------------	
+						SVG import
+						
+1. import MatIconRegistry from,
+	import { MatIconRegistry } from '@angular/material';
+2. Inorder to prevent cross site vulnarability (ie) svg url passed to the icon registry, use DomSanitizer,
+	import { DomSanitizer } from '@angular/platform-browser';
