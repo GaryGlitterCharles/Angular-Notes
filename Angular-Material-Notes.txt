@@ -58,3 +58,14 @@ npm install --save hammerjs
 	import { MatIconRegistry } from '@angular/material';
 2. Inorder to prevent cross site vulnarability (ie) svg url passed to the icon registry, use DomSanitizer,
 	import { DomSanitizer } from '@angular/platform-browser';
+	
+----------------------------------------------------------------------------------------------------------------------------------------
+						
+						Dialog Box
+						
+1. import ,
+	import {MatDialog} from '@angular/material';
+2. In the template,
+	1. mat-dialog-title --- For title, placed inside the H tages,
+	2. <mat-dialog-content></mat-dialog-content> --- Place the content inside this,
+	3. <mat-dialog-actions></mat-dialog-actions> --- actions like save button can be placed here.
