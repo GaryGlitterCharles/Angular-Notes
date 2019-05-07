@@ -65,7 +65,12 @@ npm install --save hammerjs
 						
 1. import ,
 	import {MatDialog} from '@angular/material';
+	use dialogRef and subscribe to it to get the values given in the dialog box inputs when closed.
 2. In the template,
 	1. mat-dialog-title --- For title, placed inside the H tages,
 	2. <mat-dialog-content></mat-dialog-content> --- Place the content inside this,
 	3. <mat-dialog-actions></mat-dialog-actions> --- actions like save button can be placed here.
+3. import MatDialogRef to close the dialog box,
+	import {MatDialogRef} from '@angular/material;
+	and pass the null in the close paramater.
+	
